@@ -21,5 +21,21 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-'use strict';
+"use strict";
 
+let numberOfFilm = +prompt("Сколько фильмов вы уже посмотрели?", " ");
+
+let personalMovieDB = {
+  count: numberOfFilm,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+};
+
+let lastWochedFilm = prompt("Один из последних просмотренных фильмов?", " ");
+
+let raitFilm = +prompt("На сколько оцените его?", " ");
+
+personalMovieDB.movies[lastWochedFilm] = raitFilm;
+console.log(personalMovieDB.movies);
